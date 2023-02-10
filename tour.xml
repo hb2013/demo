@@ -71,16 +71,16 @@
 
 
 	
-	<scene name="scene_tree" title="tree" onstart="" thumburl="panos/tree.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_v2" title="v2" onstart="" thumburl="panos/v2.tiles/thumb.jpg" lat="" lng="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/tree.tiles/preview.jpg" />
+		<preview url="panos/v2.tiles/preview.jpg" />
 
 		<image>
-			<cube url="panos/tree.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024" />
+			<cube url="panos/v2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024" />
 		</image>
 
 	</scene>
