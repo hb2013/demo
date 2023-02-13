@@ -71,44 +71,16 @@
 
 
 	
-	<scene name="scene_v3" title="v3" onstart="" thumburl="panos/v3.tiles/thumb.jpg" lat="" lng="" heading="">
+	<scene name="scene_abc" title="abc" onstart="" thumburl="panos/abc.tiles/thumb.jpg" lat="" lng="" heading="">
 		
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
 		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
-		<preview url="panos/v3.tiles/preview.jpg" />
+		<preview url="panos/abc.tiles/preview.jpg" />
 
 		<image>
-			<cube url="panos/v3.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_v4" title="v4" onstart="" thumburl="panos/v4.tiles/thumb.jpg" lat="" lng="" heading="">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/v4.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/v4.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024" />
-		</image>
-
-	</scene>
-
-	<scene name="scene_v5" title="v5" onstart="" thumburl="panos/v5.tiles/thumb.jpg" lat="" lng="" heading="">
-		
-		<control bouncinglimits="calc:image.cube ? true : false" />
-
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
-
-		<preview url="panos/v5.tiles/preview.jpg" />
-
-		<image>
-			<cube url="panos/v5.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024" />
+			<cube url="panos/abc.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048" />
 		</image>
 
 	</scene>
