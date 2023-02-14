@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "browser-sync start --server './gao' --files '**/*.css, **/*.html'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7"
+  }
+}

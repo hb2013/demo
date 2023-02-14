@@ -59,7 +59,7 @@
 	               />
 
 	<!--
-	    For an alternative skin design either change the <skin_settings> values 
+	    For an alternative skin design either change the <skin_settings> values
 	    from above or optionally include one of the predefined designs from below.
 	-->
 	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
@@ -70,12 +70,12 @@
 	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
 
 
-	
+
 	<scene name="scene_gao" title="gao" onstart="" thumburl="panos/gao.tiles/thumb.jpg" lat="" lng="" heading="">
-		
+
 		<control bouncinglimits="calc:image.cube ? true : false" />
 
-		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="90" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
 
 		<preview url="panos/gao.tiles/preview.jpg" />
 
