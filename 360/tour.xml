@@ -1,0 +1,189 @@
+﻿<krpano version="1.20.11" title="Virtual Tour">
+
+	<include url="skin/vtourskin.xml" />
+	<include url="fun.xml" />
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="false"
+	               maps_type="google"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               maps_loadonfirstuse="true"
+	               gyro="true"
+	               gyro_keeplookingdirection="false"
+	               webvr="true"
+	               webvr_keeplookingdirection="true"
+	               webvr_prev_next_hotspots="true"
+	               autotour="false"
+	               littleplanetintro="false"
+	               followmousecontrol="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="false"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext=""
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x2D3E50"
+	               design_bgalpha="0.8"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+
+	<scene name="scene_a" title="a" onstart="snowballs()" thumburl="panos/a.tiles/thumb.jpg" lat="" lng="" heading="">
+		<!-- <include url="pos.xml" /> -->
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="90" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/a.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/a.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2048,3840" />
+		</image>
+		<include url="snow.xml" />
+		<hotspot name="spota1" url="a/dog.png" onloaded="do_crop_animation(200,178, 10);" ath="117.581" atv="21.687" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.6" zoom="true" />
+		<hotspot name="spota2" url="a/diao.png" onloaded="do_crop_animation(187,200, 10);" ath="57.238" atv="4.899" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="1" zoom="true" />
+		<hotspot name="spota3" url="a/ling.png" onloaded="do_crop_animation(243,200, 10);" ath="142.784" atv="6.784" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.7" zoom="true" />
+		<hotspot name="spota4" url="a/mao.png" onloaded="do_crop_animation(330,200, 10);" ath="-118.679" atv="26.084" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.5" zoom="true" />
+		<hotspot name="spota5" url="a/diao.png" onloaded="do_crop_animation(187,200, 10);" ath="-122.545" atv="6.264" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="1" zoom="true" />
+		<hotspot name="spota6" url="a/ling.png" onloaded="do_crop_animation(243,200, 10);" ath="-36.771" atv="6.557" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.7" zoom="true" />
+		<hotspot name="spota4b" url="a/mao.png" onloaded="do_crop_animation(330,200, 10);" ath="61.093" atv="25.743" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.5" zoom="true" />
+		<hotspot name="spota1b" url="a/dog.png" onloaded="do_crop_animation(200,178, 10);" ath="-62.39" atv="22.598" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.6" zoom="true" />
+
+	</scene>
+
+	<scene name="scene_b" title="b" onstart="snowballs()" thumburl="panos/b.tiles/thumb.jpg" lat="" lng="" heading="">
+		<!-- <include url="pos.xml" /> -->
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="90" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/b.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/b.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024" />
+		</image>
+		<include url="snow.xml" />
+		<hotspot name="spotb1a" url="b/gou.png" onloaded="do_crop_animation(255,200, 20);" ath="-8.677" atv="17.225" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.6" zoom="true" />
+		<hotspot name="spotb2" url="b/mao.png" onloaded="do_crop_animation(246,200, 10);" ath="-24.799" atv="8.577" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.6" zoom="true" />
+		<hotspot name="spotb3" url="b/xiaogou.png" onloaded="do_crop_animation(296,200, 10);" ath="25.36" atv="7.489" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.4" zoom="true" />
+
+		<hotspot name="spotb4a" url="b/gou.png" onloaded="do_crop_animation(255,200, 20);" ath="171.339" atv="17.368" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.6" zoom="true" />
+		<hotspot name="spotb5" url="b/mao.png" onloaded="do_crop_animation(246,200, 10);" ath="154.717" atv="9.467" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.6" zoom="true" />
+		<hotspot name="spotb6" url="b/xiaogou.png" onloaded="do_crop_animation(296,200, 10);" ath="-157.284" atv="9.082" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.4" zoom="true" />
+
+	</scene>
+
+	<scene name="scene_c" title="c" onstart="snowballs()" thumburl="panos/c.tiles/thumb.jpg" lat="" lng="" heading="">
+		<!-- <include url="pos.xml" /> -->
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="90" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/c.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/c.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024" />
+		</image>
+		<include url="snow.xml" />
+		<hotspot name="spotc" url="c/gou.png" onloaded="do_crop_animation(204,200, 10);" ath="-10.051" atv="8.231" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.6" zoom="true" />
+		<hotspot name="spotc2" url="c/gou.png" onloaded="do_crop_animation(204,200, 10);" ath="170.011" atv="7.541" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.6" zoom="true" />
+
+	</scene>
+
+	<scene name="scene_d" title="d" onstart="snowballs()" thumburl="panos/d.tiles/thumb.jpg" lat="" lng="" heading="">
+		<!-- <include url="pos.xml" /> -->
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="90" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/d.tiles/preview.jpg" />
+
+		<image>
+			<cube url="panos/d.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024" />
+		</image>
+		<include url="snow.xml" />
+		<hotspot name="spotd1" url="d/mao.png" onloaded="do_crop_animation(232,200, 10);" ath="51.338" atv="6.758" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.4" zoom="true" />
+		<hotspot name="spotd2" url="d/gou.png" onloaded="do_crop_animation(186,200, 10);" ath="-55.704" atv="7.334" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.4" zoom="true" />
+		<hotspot name="spotd1b" url="d/mao.png" onloaded="do_crop_animation(232,200, 10);" ath="-129.734" atv="6.758" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.4" zoom="true" />
+		<hotspot name="spotd2b" url="d/gou.png" onloaded="do_crop_animation(186,200, 10);" ath="124.262" atv="7.334" onclick="js(clickfun('1'););" ondown="draghotspot();" scale="0.4" zoom="true" />
+
+	</scene>
+<action name="do_crop_animation" scope="local" args="framewidth, frameheight, framerate">
+	<!-- 定义局部变量 -->
+	calc(local.xframes, (caller.imagewidth /framewidth) BOR 0);
+	calc(local.frames, xframes * ((caller.imageheight / frameheight) BOR 0));
+	def(local.frame, integer, 0);
+	
+	<!-- 设置第一帧 -->
+	calc(caller.crop, '0|0|' + framewidth + '|' + frameheight);
+	
+	<!-- 动画部分 -->
+	setinterval(calc('crop_anim_' + caller.name), calc(1.0 / framerate),
+		if(caller.loaded,
+			inc(frame);
+			if(frame GE frames, if(caller.onlastframe !== null, callwith(caller, onlastframe() ) ); set(frame,0); );
+			mod(xpos, frame, xframes);
+			div(ypos, frame, xframes);
+			Math.floor(ypos);
+			mul(xpos, framewidth);
+			mul(ypos, frameheight);
+			calc(caller.crop, xpos + '|' + ypos + '|' + framewidth + '|' + frameheight);
+		  ,
+			<!-- 当热点移除时停止动画 -->
+			clearinterval(calc('crop_anim_' + caller.name));
+		);
+	);
+</action>
+<events name="littleplanetintro_control" keep="true"
+	onnewpano="
+	if(scene[get(xml.scene)].index == 0 OR scene[get(xml.scene)].index == 1 OR scene[get(xml.scene)].index == 2 OR scene[get(xml.scene)].index == 3 ,
+	stoptween(view.hlookat|view.vlookat|view.fov|view.distortion);
+			skin_setup_littleplanetintro()
+	)"
+
+	/>
+
+</krpano>
